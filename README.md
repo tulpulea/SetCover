@@ -19,3 +19,5 @@ The main algorothmic tools used:
 Note: The code in main.py is the original python code for the homework assignment I completed in my CSE 431 class. In this project, the code was adapted into C++ in the SetCover.cpp and SetCover.hpp files.
 
 The project was made and compiled with MacOS Clang++ compiler
+
+There are multiple input text files that can be run by specifying the input file in the main.cpp file.
