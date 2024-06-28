@@ -1,0 +1,74 @@
+36 40
+Cosmology Robotics Biometrics CognitiveScience Electromagnetism HumanMachineInterfaces WarpTechnologies CloudComputing Semiconductors ArtificialLife WormHoles DevelopmentalBiology Geology ElectricalEngineering AgentBasedModeling LinearAlgebra ArtificialIntelligence ImageRecognition Acoustics BiochemicalProcesses 3DPrinting Cryobiology SoftwareEngineering ComputationalBiology DigitalEvolution AsteroidMining Nanomaterials MechanizedVehicles VirtualReality Visualizations QuantumPhysics WasteManagement Ecology AugmentedReality Metals Agriculture Plastics NonEuclidianStructures Networks Polymers
+6
+WormHoles ElectricalEngineering DigitalEvolution WasteManagement Ecology Plastics
+3
+ArtificialLife LinearAlgebra Metals
+3
+ArtificialLife Cryobiology QuantumPhysics
+2
+Biometrics AsteroidMining
+4
+DevelopmentalBiology ArtificialIntelligence Nanomaterials WasteManagement
+2
+MechanizedVehicles QuantumPhysics
+5
+MechanizedVehicles Visualizations AugmentedReality Plastics NonEuclidianStructures
+3
+ElectricalEngineering BiochemicalProcesses AugmentedReality
+4
+HumanMachineInterfaces ArtificialIntelligence ImageRecognition Metals
+5
+Geology ComputationalBiology Visualizations NonEuclidianStructures Polymers
+5
+Electromagnetism Semiconductors 3DPrinting WasteManagement Networks
+5
+Robotics Biometrics WormHoles ImageRecognition VirtualReality
+5
+MechanizedVehicles VirtualReality WasteManagement Agriculture Polymers
+3
+Electromagnetism DevelopmentalBiology AugmentedReality
+3
+Nanomaterials MechanizedVehicles Networks
+6
+CognitiveScience HumanMachineInterfaces DevelopmentalBiology AgentBasedModeling DigitalEvolution VirtualReality
+5
+Semiconductors DevelopmentalBiology SoftwareEngineering Visualizations Polymers
+2
+Electromagnetism ImageRecognition
+10
+CognitiveScience WarpTechnologies CloudComputing Geology ArtificialIntelligence Cryobiology VirtualReality WasteManagement Metals NonEuclidianStructures
+3
+Cosmology Semiconductors 3DPrinting
+3
+HumanMachineInterfaces ArtificialIntelligence Agriculture
+7
+CognitiveScience WarpTechnologies ArtificialLife Cryobiology AsteroidMining Visualizations QuantumPhysics
+5
+HumanMachineInterfaces Semiconductors AgentBasedModeling Acoustics Plastics
+2
+ElectricalEngineering Metals
+3
+Robotics Geology Visualizations
+4
+Cosmology CognitiveScience Acoustics ComputationalBiology
+4
+BiochemicalProcesses ComputationalBiology Ecology NonEuclidianStructures
+1
+DevelopmentalBiology
+6
+Geology ArtificialIntelligence BiochemicalProcesses 3DPrinting SoftwareEngineering Ecology
+5
+Biometrics Electromagnetism CloudComputing WormHoles Agriculture
+3
+Cryobiology VirtualReality Polymers
+6
+CognitiveScience Geology Cryobiology SoftwareEngineering AsteroidMining Agriculture
+6
+HumanMachineInterfaces Semiconductors ArtificialLife 3DPrinting Nanomaterials AugmentedReality
+4
+Electromagnetism AgentBasedModeling QuantumPhysics Agriculture
+3
+Cosmology Electromagnetism DevelopmentalBiology
+11
+Biometrics ElectricalEngineering AgentBasedModeling LinearAlgebra ImageRecognition BiochemicalProcesses 3DPrinting ComputationalBiology MechanizedVehicles NonEuclidianStructures Polymers

@@ -1,0 +1,38 @@
+18 24
+NaturalComputing VirtualReality ParticalPhysics ChemicalEngineering Medicine FoodSafety BiochemicalProcesses Superconductors Polymers Agriculture CloudComputing CoRobotics Energy Neuroscience Bioinformatics Cryptography Statistics Metalurgy Hematology Aerobiology Cybersecurity StatisticalMechanics Xenobiology Robotics
+8
+Medicine FoodSafety Superconductors Polymers Energy Cryptography Statistics StatisticalMechanics
+2
+FoodSafety Cryptography
+3
+NaturalComputing VirtualReality ChemicalEngineering
+6
+NaturalComputing Medicine Superconductors Polymers Bioinformatics Robotics
+9
+VirtualReality FoodSafety Polymers Agriculture Energy Bioinformatics Statistics Cybersecurity Robotics
+4
+BiochemicalProcesses Superconductors Polymers Hematology
+5
+Medicine Polymers Metalurgy Aerobiology Cybersecurity
+2
+CloudComputing Xenobiology
+4
+Medicine BiochemicalProcesses Metalurgy Robotics
+4
+NaturalComputing Neuroscience Cryptography Cybersecurity
+1
+VirtualReality
+6
+VirtualReality Agriculture CloudComputing Bioinformatics Cryptography Cybersecurity
+10
+NaturalComputing Superconductors Agriculture CoRobotics Neuroscience Bioinformatics Statistics Metalurgy Xenobiology Robotics
+4
+NaturalComputing ParticalPhysics Aerobiology StatisticalMechanics
+2
+ChemicalEngineering Neuroscience
+3
+Bioinformatics Cryptography Cybersecurity
+7
+ParticalPhysics Superconductors Polymers CoRobotics Statistics Hematology StatisticalMechanics
+3
+VirtualReality Bioinformatics Statistics

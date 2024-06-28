@@ -1,0 +1,92 @@
+45 30
+ParticalPhysics Polymers Systematics CivilEngineering ArtificialIntelligence InformationTransfer CelestialDynamics LinearAlgebra Astrogeology XenoPsychology AtmosphereScience Nanomanufacturing Microbiology QuantumInformation StructualBiology Mathematics QuantumPhysics Metalurgy Agriculture Electromagnetism Astrobiology EvolutionaryBiology BioEngineering NuclearPhysics ImageRecognition TissueEngineering ForceFields VirtualReality Simulation Biogeography
+3
+XenoPsychology Agriculture TissueEngineering
+5
+CelestialDynamics StructualBiology Mathematics Agriculture NuclearPhysics
+0
+
+2
+Microbiology Agriculture
+2
+ParticalPhysics Nanomanufacturing
+0
+
+5
+AtmosphereScience QuantumInformation Agriculture ForceFields Biogeography
+2
+ParticalPhysics XenoPsychology
+3
+Astrobiology NuclearPhysics Biogeography
+1
+Simulation
+2
+QuantumPhysics Biogeography
+0
+
+2
+QuantumPhysics Simulation
+2
+Polymers CivilEngineering
+0
+
+1
+StructualBiology
+3
+Microbiology Mathematics VirtualReality
+1
+Simulation
+3
+QuantumInformation QuantumPhysics Metalurgy
+3
+InformationTransfer Astrogeology AtmosphereScience
+4
+ParticalPhysics XenoPsychology ForceFields VirtualReality
+2
+Nanomanufacturing ImageRecognition
+0
+
+1
+ImageRecognition
+2
+Mathematics ForceFields
+3
+LinearAlgebra ForceFields VirtualReality
+4
+Mathematics Electromagnetism NuclearPhysics ImageRecognition
+0
+
+1
+CelestialDynamics
+2
+ArtificialIntelligence Electromagnetism
+3
+Systematics QuantumInformation VirtualReality
+4
+ParticalPhysics InformationTransfer LinearAlgebra BioEngineering
+3
+Metalurgy NuclearPhysics TissueEngineering
+3
+CivilEngineering AtmosphereScience Simulation
+2
+TissueEngineering Biogeography
+1
+EvolutionaryBiology
+3
+Astrogeology Microbiology Simulation
+2
+ParticalPhysics Systematics
+3
+XenoPsychology Metalurgy VirtualReality
+2
+ArtificialIntelligence EvolutionaryBiology
+4
+Systematics CivilEngineering BioEngineering ForceFields
+2
+XenoPsychology Simulation
+3
+Astrobiology ImageRecognition ForceFields
+4
+QuantumInformation Mathematics QuantumPhysics Agriculture
+4
+ParticalPhysics Polymers Systematics CelestialDynamics

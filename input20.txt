@@ -1,0 +1,52 @@
+25 10
+Nanomaterials 3DPrinting MultivarateCalculus XenoPsychology Ceramics Metalurgy Hematology Astrobiology Semiconductors MechanizedVehicles
+6
+Nanomaterials 3DPrinting MultivarateCalculus Ceramics Hematology Semiconductors
+2
+XenoPsychology Astrobiology
+1
+MechanizedVehicles
+2
+Nanomaterials MultivarateCalculus
+4
+XenoPsychology Metalurgy Hematology Astrobiology
+4
+Nanomaterials Ceramics Metalurgy MechanizedVehicles
+6
+XenoPsychology Metalurgy Hematology Astrobiology Semiconductors MechanizedVehicles
+3
+3DPrinting Hematology Astrobiology
+3
+Nanomaterials 3DPrinting Astrobiology
+3
+3DPrinting Hematology MechanizedVehicles
+5
+3DPrinting MultivarateCalculus Ceramics Metalurgy Semiconductors
+2
+XenoPsychology Metalurgy
+4
+Nanomaterials MultivarateCalculus Ceramics Hematology
+4
+Nanomaterials Hematology Semiconductors MechanizedVehicles
+5
+XenoPsychology Ceramics Metalurgy Hematology MechanizedVehicles
+4
+Nanomaterials MultivarateCalculus Semiconductors MechanizedVehicles
+4
+Nanomaterials 3DPrinting Hematology Semiconductors
+4
+Nanomaterials XenoPsychology Metalurgy MechanizedVehicles
+3
+3DPrinting Ceramics Metalurgy
+3
+Nanomaterials MultivarateCalculus XenoPsychology
+2
+Ceramics Metalurgy
+6
+3DPrinting XenoPsychology Metalurgy Astrobiology Semiconductors MechanizedVehicles
+2
+3DPrinting XenoPsychology
+5
+Ceramics Hematology Astrobiology Semiconductors MechanizedVehicles
+5
+3DPrinting MultivarateCalculus Ceramics Astrobiology MechanizedVehicles
