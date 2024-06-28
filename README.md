@@ -15,3 +15,5 @@ The file SetCover.cpp contains the implementation of SetCover class declared in 
 The main algorothmic tools used:
 1) Bounding- keeping a track of the current "best" solution, and automatically pruning branches that would only incur a worse solution; and boudning
 2) Branching- pruning branches that can't possibly reach a solution, ie remove branches if the sum of the current solution set and elements in the remaining subsets is less than the length of elements in the universe.
+
+Note: The code in main.py is the original python code for the homework assignment I completed in my CSE 431 class. In this project, the code was adapted into C++ in the SetCover.cpp and SetCover.hpp files.
