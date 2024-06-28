@@ -17,3 +17,5 @@ The main algorothmic tools used:
 2) Branching- pruning branches that can't possibly reach a solution, ie remove branches if the sum of the current solution set and elements in the remaining subsets is less than the length of elements in the universe.
 
 Note: The code in main.py is the original python code for the homework assignment I completed in my CSE 431 class. In this project, the code was adapted into C++ in the SetCover.cpp and SetCover.hpp files.
+
+The project was made and compiled with MacOS Clang++ compiler
