@@ -1,9 +1,13 @@
+import time
+
 class MinPeople(): 
     def __init__(self):
         self.people = None
         self.skills = None
         self.best = None
         self.ticket = set()
+        self.number_nodes = 0
+
 
     def read(self):
         file = open("input15.txt","r")
@@ -61,6 +65,8 @@ class MinPeople():
 
     def solve(self,curr):
         #found solution
+        self.number_nodes += 1
+
         if self.evaluate_ticket() == len(self.skills):
             self.best = min(self.best,len(self.ticket))
             return 
@@ -76,10 +82,36 @@ class MinPeople():
         self.ticket.remove(curr)
         self.solve(curr+1)
 
+    def brute_force(self,curr):
+        self.number_nodes += 1
+        if self.evaluate_ticket() == len(self.skills):
+            self.best = min(self.best, len(self.ticket))
+            return
+        
+        if curr == len(self.people):
+            return
+        
+        self.ticket.add(curr)
+        self.brute_force(curr+1)
+        self.ticket.remove(curr)
+        self.brute_force(curr+1)
+
     def find_min(self):
         self.preprocess()
-        start = 0
-        self.solve(start)
+        # start = 0
+        self.number_nodes = 0
+        start_time_brute = time.time()
+        self.brute_force(0)
+        end_time_brute = time.time()
+        brute_time = end_time_brute - start_time_brute
+        print(f"Brute-force: Nodes searched = {self.number_nodes}, Time taken = {brute_time:.6f} seconds")
+
+        self.number_nodes = 0
+        start_time_bb = time.time()
+        self.solve(0)
+        end_time_bb = time.time()
+        bb_time = end_time_bb - start_time_bb
+        print(f"Branch-and-Bound: Nodes searched = {self.number_nodes}, Time taken = {bb_time:.6f} seconds")
         return self.best
     
 m = MinPeople()
