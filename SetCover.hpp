@@ -1,7 +1,8 @@
 #ifndef SETCOVER
 #define SETCOVER
 
-#include <set>
+#include <bitset> //was <set>
+#include <unordered_map>
 #include <map>
 #include <vector>
 #include <utility>
@@ -19,15 +20,18 @@ public:
     void rm_redun_subsets(); //remove redundant subsets
     void preprocess(); //preprocess 
     int eval_ticket(); //evaluate ticket
-    void solve(std::vector<std::set<std::string>>::iterator); //solve problem
+    void solve(std::vector<std::bitset<64>>::iterator, const std::bitset<64>&, const int&); //solve problem
     int find_min(); //find and return solution
 
 private:
-    std::vector<std::set<std::string>> people; //initialize vector of people to skills
-    std::set<std::string> skills; //initialize set of skills in universe
+    // std::unordered_map<std::string, int> skill_to_index;
+    std::vector<std::bitset<64>> people_skills;
+    // std::vector<std::vector<bool>> people_skills; //initialize vector of people to skills
+    std::unordered_map<std::string, int> skill_to_index;
+    // std::unordered_set<std::string> skills; //initialize set of skills in universe
     int best; //initialize solution data
-    // std::set<int> ticket; //initialize ticket of solution
-    std::set<std::vector<std::set<std::string>>::iterator> ticket; //initialize ticket of solution
+    std::vector<int> ticket; //initialize ticket of solution
+    // std::unordered_set<std::vector<std::unordered_set<std::string>>::iterator> ticket; //initialize ticket of solution
     // set of pointers to vec
 
 }
