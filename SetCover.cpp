@@ -84,7 +84,7 @@ void SetCover::rm_redun_subsets() {
     // Step 1: Sort the people_skills vectors lexicographically (ascending order)
     // std::cout << "size of people " << people_skills.size() <<std::endl;
     std::sort(people_skills.begin(), people_skills.end(), 
-    [](const std::bitset<64>& a, const std::bitset<64>& b) {return a.to_string() < b.to_string();});
+    [](const std::bitset<64>& a, const std::bitset<64>& b) {return a.count() < b.count();});
     // std::cout << "size of people " << people_skills.size() <<std::endl;
 
     // Step 2: Iterate through the sorted list and remove duplicates and subsets
@@ -270,7 +270,7 @@ void SetCover::solve(std::vector<std::bitset<64>>::iterator curr, const std::bit
 
     // Iteratively accumulate the remaining people's skills using bitwise OR
     std::bitset<64> remaining_skills = covered_skills;
-    int remaining_coverage = current_coverage;
+    // int remaining_coverage = current_coverage;
 
     // Iterate through the remaining people after 'curr'
     for (auto it = curr; it != people_skills.end(); ++it) {
@@ -278,7 +278,7 @@ void SetCover::solve(std::vector<std::bitset<64>>::iterator curr, const std::bit
     }
 
     // If the total potential skills (current coverage + remaining skills) is less than the total skills
-    if (remaining_coverage + remaining_skills.count() < static_cast<int>(skill_to_index.size())) {
+    if (remaining_skills.count() < static_cast<int>(skill_to_index.size())) {
         return;  // End recursion, as it's not possible to cover all skills from here
     }
 

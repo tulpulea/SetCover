@@ -3,6 +3,7 @@ import time
 class MinPeople(): 
     def __init__(self):
         self.people_bit = None
+        self.people_cache = None
         self.skills = None
         self.best = None
         self.ticket = []
@@ -41,32 +42,50 @@ class MinPeople():
 
     def is_subset(smaller:int, larger:int):
         return (smaller & larger) == smaller
-
+    
     def rm_redun_subsets_cache(self):
-        subsets_to_remove = set()
+        self.people_cache.sort(key=len, reverse= True)
+        unique_people = []
+        for i,skills in enumerate(self.people_cache):
+            is_subset = False
+            for unique_skills in unique_people:
+                if skills <= unique_skills:
+                    is_subset = True
+                    break
 
-        # Iterate through all pairs of subsets
-        for person_i, skills_i in enumerate(self.people_cache):
-            for person_j, skills_j in enumerate(self.people_cache):
-                # Check if skills_j is a proper subset of skills_i
-                if person_i != person_j and skills_i < skills_j:
-                    subsets_to_remove.add(person_i)
-                elif person_i != person_j and skills_i == skills_j:
-                    if person_i < person_j:
-                        subsets_to_remove.add(person_j)
-                    else:
-                        subsets_to_remove.add(person_i)
+            if not is_subset:
+                unique_people.append(skills)
+
+        self.people_cache = unique_people
         
-        subsets_to_remove = list(subsets_to_remove)
-        subsets_to_remove.sort(reverse=True)
-        for person_to_remove in subsets_to_remove:
-            self.people_cache.pop(person_to_remove)
+
+
+
+    # def rm_redun_subsets_cache(self):
+    #     subsets_to_remove = set()
+
+    #     # Iterate through all pairs of subsets
+    #     for person_i, skills_i in enumerate(self.people_cache):
+    #         for person_j, skills_j in enumerate(self.people_cache):
+    #             # Check if skills_j is a proper subset of skills_i
+    #             if person_i != person_j and skills_i < skills_j:
+    #                 subsets_to_remove.add(person_i)
+    #             elif person_i != person_j and skills_i == skills_j:
+    #                 if person_i < person_j:
+    #                     subsets_to_remove.add(person_j)
+    #                 else:
+    #                     subsets_to_remove.add(person_i)
+        
+    #     subsets_to_remove = list(subsets_to_remove)
+    #     subsets_to_remove.sort(reverse=True)
+    #     for person_to_remove in subsets_to_remove:
+    #         self.people_cache.pop(person_to_remove)
 
 
     def rm_redun_subsets_bit(self):
         # Step 1: Sort the people list lexicographically (based on skill sets)
         # print(self.people)
-        self.people_bit.sort(key=str,reverse=True)  # Sorting by binary string representation of skill sets
+        self.people_bit.sort(key= lambda skills_bit: bin(skills_bit).count("1"),reverse=True)  # Sorting by binary string representation of skill sets
 
         # Step 2: Iterate through the sorted list and remove subsets
         unique_people_skills = []
@@ -107,6 +126,9 @@ class MinPeople():
         #     del self.people[person_to_remove]
 
     def preprocess(self):
+        print("bit people length",len(self.people_bit))
+        print("cache people length",len(self.people_cache))
+
         self.rm_redun_subsets_bit()
         print("bit people length",len(self.people_bit))
         self.rm_redun_subsets_cache()
@@ -119,11 +141,12 @@ class MinPeople():
     def evaluate_ticket(self):
         check = {skill:0 for skill in self.skills}
         for person in self.ticket:
-            for skill in self.people[person]:
+            for skill in self.people_cache[person]:
                 check[skill] = 1
         return sum(check.values())
     
     def solve_bit(self, curr, covered_skills, current_coverage):
+        self.number_nodes += 1
         if current_coverage == len(self.skills):
             self.best = min(self.best, len(self.ticket))
             return
@@ -140,7 +163,7 @@ class MinPeople():
         
         remaining_coverage = bin(remaining_skills).count('1')
 
-        if current_coverage + remaining_coverage < len(self.skills):
+        if remaining_coverage < len(self.skills):
             return
 
         if len(self.ticket) >= self.best:
@@ -164,14 +187,18 @@ class MinPeople():
 
 
     def solve_cache(self, curr, covered_skills, current_coverage):
+        self.number_nodes += 1
         # Base case: If all skills are covered
         if current_coverage == len(self.skills):
             self.best = min(self.best, len(self.ticket))
             return
 
         # Branching condition: Check remaining potential coverage
-        remaining_skills = sum(len(skills) for skills in self.people_cache[curr:])
-        if curr == len(self.people_cache) or (current_coverage + remaining_skills < len(self.skills)):
+        remaining_skills = set(skill for skill in covered_skills)
+        for skills in self.people_cache[curr:]:
+            remaining_skills |= skills
+        # remaining_skills = sum(len(skills) for skills in self.people_cache[curr:])
+        if curr == len(self.people_cache) or (len(remaining_skills) < len(self.skills)):
             return
 
         # Bounding condition: If current ticket size exceeds the best solution
@@ -222,16 +249,17 @@ class MinPeople():
             self.best = min(self.best, len(self.ticket))
             return
         
-        if curr == len(self.people):
+        if curr == len(self.people_cache):
             return
         
-        self.ticket.add(curr)
+        self.ticket.append(curr)
         self.brute_force(curr+1)
-        self.ticket.remove(curr)
+        self.ticket.pop()
         self.brute_force(curr+1)
 
     def find_min(self):
         self.preprocess()
+
         # start = 0
         # self.number_nodes = 0
         # start_time_brute = time.time()
@@ -239,7 +267,9 @@ class MinPeople():
         # end_time_brute = time.time()
         # brute_time = end_time_brute - start_time_brute
         # print(f"Brute-force: Nodes searched = {self.number_nodes}, Time taken = {brute_time:.6f} seconds")
-
+        
+        self.best = len(self.people_bit)
+        self.ticket = []
         self.number_nodes = 0
         start_time_bb = time.time()
         covered_skills = 0
@@ -249,6 +279,7 @@ class MinPeople():
         print(self.best)
         print(f"Branch-and-Bound Bits: Nodes searched = {self.number_nodes}, Time taken = {bb_time:.6f} seconds")
         
+        self.ticket = []
         self.best = len(self.people_cache)
         self.number_nodes = 0
         start_time_bb = time.time()
